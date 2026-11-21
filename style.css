@@ -1,0 +1,52 @@
+#title {
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#school {
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#quote {
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+}
+
+.navbar {
+    text-align: left;
+    padding: 10px 40px 0 0;
+}
+
+.navbar ul {
+    list-style: none;
+}
+.aboutmetop {
+    width: 60%;
+    background-color: rgb(123, 175, 212);
+    display: flow-root;
+}
+
+.aboutmemid {
+    width: 60%;
+    background-color: rgb(114, 93, 191);
+    display: flow-root;
+}
+
+#left {
+    float: left;
+    width: 40%;
+    padding: 2%;
+    background-color: inherit;
+}
+
+#right {
+    float: right;
+    width: 40%;
+    padding: 2%;
+    background-color: inherit; 
+}

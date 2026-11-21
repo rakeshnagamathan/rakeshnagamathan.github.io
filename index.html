@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakesh Nagamathan - Academic Portfolio</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+            background: #ffffff;
+            color: #2c353d;
+            margin: 0;
+            line-height: 1.75;
+        }
+
+        h1, h2, .quote-box {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Clean Header */
+        header {
+            background: #001A36;
+            color: white;
+            padding: 45px 20px;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .profile-img {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            border: 3px solid #7BAFD4;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: normal;
+            letter-spacing: 0.3px;
+        }
+
+        .class-year {
+            color: #7BAFD4;
+            font-size: 16px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .subtitle {
+            color: #d0e4f5;
+            margin-top: 4px;
+            font-size: 15px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            margin-top: 12px;
+            color: #a8b8c8;
+        }
+
+        /* Minimalist Underline Navigation */
+        nav {
+            border-bottom: 1px solid #e2e8f0;
+            background: #fafbfc;
+        }
+
+        .nav-inner {
+            display: flex;
+            gap: 28px;
+            padding: 0 20px;
+        }
+
+        .nav-btn {
+            font-family: inherit;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: #4a5568;
+            padding: 16px 4px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav-btn:hover {
+            color: #001A36;
+        }
+
+        .nav-btn.active {
+            color: #001A36;
+            font-weight: bold;
+            border-bottom-color: #7BAFD4;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 20px 60px;
+        }
+
+        h2 {
+            color: #001A36;
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        p {
+            font-size: 16.5px;
+            margin: 0 0 20px;
+        }
+
+        /* Clean Editorial Quote */
+        .quote-box {
+            border-left: 3px solid #7BAFD4;
+            padding: 4px 0 4px 20px;
+            margin: 0 0 32px;
+            font-style: italic;
+            color: #3b4a59;
+            font-size: 16.5px;
+        }
+
+        .quote-author {
+            font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+            font-style: normal;
+            color: #64748b;
+            display: block;
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        /* Subtle Floated Images */
+        .float-right, .float-left {
+            width: 205px;
+            border-radius: 6px;
+        }
+        .float-right { float: right; margin: 6px 0 18px 26px; }
+        .float-left { float: left; margin: 6px 26px 18px 0; }
+        .poster-img { width: 260px; }
+
+        /* Tabs & PDF */
+        .tab-section { display: none; }
+        .tab-section.active { display: block; }
+
+        iframe {
+            width: 100%;
+            height: 720px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13.5px;
+            color: #718096;
+            border-top: 1px solid #edf2f7;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container { flex-direction: column; text-align: center; }
+            .nav-inner { justify-content: center; flex-wrap: wrap; gap: 16px; }
+            .float-right, .float-left, .poster-img { float: none; display: block; margin: 20px auto; width: 100%; max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container profile-container">
+            <img src="edited-photo.png" alt="Rakesh Nagamathan Profile Photo" class="profile-img">
+            <div>
+                <h1>Rakesh Nagamathan</h1>
+                <span class="class-year">University of North Carolina at Chapel Hill • Class of 2028</span>
+                <div class="subtitle">B.S. Candidate in Biology, Minor in African American and Diaspora Studies</div>
+                <div class="contact-info">
+                    rakeshnagamathan@gmail.com &nbsp;•&nbsp; Concord &amp; Chapel Hill, NC &nbsp;•&nbsp; (704) 791-5014
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-inner">
+            <button class="nav-btn active" onclick="openTab('about', this)">About Me</button>
+            <button class="nav-btn" onclick="openTab('resume', this)">Academic Resume</button>
+            <button class="nav-btn" onclick="openTab('research', this)">Research Statement</button>
+            <a href="https://www.linkedin.com/in/rakesh-nagamathan" target="_blank" class="nav-btn">LinkedIn ↗</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- 1. ABOUT ME -->
+        <section id="about" class="tab-section active">
+            <h2>About Me</h2>
+            <div class="quote-box">
+                "The most important quality of a successful scientist, based on the people I have known, is resilience."
+                <span class="quote-author">— Dr. Carolyn Bertozzi, 2022 Nobel Laureate in Chemistry</span>
+            </div>
+
+            <img src="IMG_0567 2.jpg" alt="Rakesh Nagamathan Graduation" class="float-right">
+            <p>
+                Hello, my name is Rakesh Nagamathan. I am a junior at UNC Chapel Hill majoring in Biology with a minor in African American and Diaspora Studies. Through my interdisciplinary education in both Biology and African American Studies, I will explore how innovations in animal healthcare can revolutionize human treatment, especially those of marginalized communities. My academic journey is defined by a commitment to interdisciplinary collaboration, whether it be engineering therapeutic proteins for Multiple Sclerosis in transgenic soybeans or studying vector-borne diseases and maternal metabolism.
+            </p>
+
+            <img src="IMG_1037.jpeg" alt="Rakesh Working in Wet Lab" class="float-left">
+            <p>
+                I have had multiple years of experience within the academic and clinical sectors of medicine, and have emphasized the importance of research throughout my education. As a student in the Honors Program in Biological Sciences under the SoyMeds Lab, I conducted specialized research under the mentorship of Dr. Daniel Nelson and Dr. Kenneth Piller on transgenic soybean bioengineering aimed at synthesizing therapeutic proteins for Multiple Sclerosis. At UNC Charlotte's 2026 Undergraduate Research Conference (URC) I was given the opportunity to present a research poster on my research titled, "Assay for Trimeric MP3-Sigma1 Expression and Assembly in Soybean".
+            </p>
+
+            <img src="pic.png" alt="Rakesh Presenting Research Poster at URC" class="float-right poster-img">
+            <p>
+                I also performed data analysis and clinical research under Dr. Saroja Voruganti at the UNC Nutrition Research Institute in Kannapolis in a comprehensive research role integrating wet-lab, computational, and clinical methodologies. I contributed to diverse projects focused on maternal metabolism, pediatric health, purine metabolites, and gene/enzyme expression, and developed a robust technical skillset in data science by utilizing RStudio for statistical analysis, Tableau for data visualization, and Excel for complex data management.
+            </p>
+
+            <p>
+                Beyond the lab, I am a dedicated Patient Safety Attendant, where I ensured continuous patient safety through 1-on-1 observation, providing high-level monitoring for at-risk patients as delegated by Registered Nurses. I also maintained accurate clinical documentation of patient behavior and status changes to support informed decision-making by healthcare providers. I have also worked as an Organic Chemistry and Biochemistry tutor for the UNC Charlotte Center for Academic Success, and have been a long-term hospital volunteer. Through my experiences in my education, I am passionate about pursuing a career as an academic physician to bridge the gap between organismal research and clinical practice for populations who need it the most.
+            </p>
+        </section>
+
+        <!-- 2. RESUME -->
+        <section id="resume" class="tab-section">
+            <h2>Academic Resume</h2>
+            <iframe src="resume.pdf"></iframe>
+        </section>
+
+        <!-- 3. RESEARCH STATEMENT -->
+        <section id="research" class="tab-section">
+            <h2>Research Statement</h2>
+            <div class="quote-box">
+                "I think a career in science inevitably teaches someone how to cope with failure."
+                <span class="quote-author">— Dr. Carolyn Bertozzi, 2022 Nobel Laureate in Chemistry</span>
+            </div>
+
+            <p>
+                Throughout my undergraduate career, I have developed an extensive array of skills across numerous disciplines in order to maintain the competencies required to succeed in scientific research in my future career. I began my journey as an undergraduate researcher in UNC Charlotte’s Epidemiology and Community Health Department alongside Dr. Rafael Vieira in a wet lab, field, and computational lab setting. I participated in field sampling across Mecklenburg County, collecting ticks, deer spleens, and deer keds, and learned the identification of all major North Carolina tick species and pathogens. Additionally, I performed multiple wet-lab procedures, including tick imaging, DNA/RNA extractions, nested and regular PCR, and gel electrophoresis.
+            </p>
+
+            <p>
+                With this basis of research, I was able to expand my skills into the clinical sector, where I conducted research in UNC Chapel Hill's Nutrition Research Institute under Dr. Saroja Voruganti in a wet lab, computational lab, and clinical lab setting. I had the unique opportunity to work on projects involving children’s health, gene and enzyme expression, and maternal metabolism. Moreover, I learned how to use Tableau for data visualization, R Studio for data analysis, and Microsoft Excel to organize and collect data. Also, I performed wet-lab procedures including protein assays, PCR, blood aliquoting, and cell culture. Finally, I shadowed participants in a clinical setting and understood the process of participation in a study.
+            </p>
+
+            <p>
+                My interest in human health and applications of molecular biology led me to begin my Honors Thesis research in UNC Charlotte’s Biology Department under Dr. Daniel Nelson on a transgenic soybean project. My focus was on expressing a therapeutic protein for multiple sclerosis in soybean plants for future animal testing. I worked with complex scientific literature and learned how to communicate scientific information in a digestible manner, while also perfecting protein assay methods and procedures in the wet lab.
+            </p>
+
+            <p>
+                Working on projects involving childhood obesity and children’s health in Dr. Voruganti’s Lab, and developing my own research and honors thesis involving immunology and molecular biology in the SoyMeds lab inspired me to continue research in Pediatric Infectious Diseases at UNC Chapel Hill, where I joined the Darville Lab to work on finding a suitable vaccine against <em>Chlamydia trachomatis</em>. <em>C. trachomatis</em> is an obligate intracellular bacterium, globally recognized as the most common sexually transmitted bacterium in the world. 75–80% of females and 65–70% of males that contract Chlamydia are asymptomatic, consequently allowing for increased transmission due to a lack of accurate diagnosis. Sexually active adolescents who contract and are diagnosed with Chlamydia administer antibiotics such as Doxycycline and Azithromycin, both of which do not prevent reinfection cycles or promote herd immunity. Overall, due to its increased incidence rates, there becomes a need to develop a cure that permanently prevents its transmission between hosts.
+            </p>
+
+            <p>
+                According to Dr. Toni Darville, technologies and “molecular approaches” within the last 15 years have helped progress the development of a vaccine that can act against “chlamydia[l]” infection. The Darville lab has recently developed a conjugated vaccine, CPAF-STG1151, which has shown promising results in mouse models through intramuscular administration, characterized by lower bacterial burden and variable gross pathology. In my honors thesis in the Darville lab, I want to investigate how different routes of administration, such as intravaginal and transcervical routes, can affect the efficacy of the vaccine. Through my past experience and honors thesis, I will have developed a deep understanding of research, and will be able to continue performing and involving myself in the field of medicine, which is dependent on the development of newer approaches to solve long-lasting ailments.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Rakesh Nagamathan • University of North Carolina at Chapel Hill
+    </footer>
+
+    <script>
+        function openTab(tabId, btn) {
+            document.querySelectorAll('.tab-section, .nav-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
